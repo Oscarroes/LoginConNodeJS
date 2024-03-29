@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- el css y bootstrap lo incluimos desde la carpeta partials - head -->
+    <%- include('partials/head') %>
+    
+    <title><%= title %></title>
+</head>
+<body>
+    <div class='homePage flex'>
+    <div class="container flex">
+        <div class="videoDiv">
+            <!-- Cuando utilizas express.static en app.js, 
+            cualquier archivo dentro de la carpeta especificada se sirve desde la raíz del servidor.
+            por lo que la ruta es directa sin bajar ni subir carpetas, va directa a public  -->
+            <video src="/videoCohete960x540.mp4" autoplay muted loop></video>
+
+            <div class="textDiv">
+                <h2 class="title">Nos vamos a Marte</h2>
+                <p>¿Estás preparado para el viaje definitivo?</p>
+                <span class="text">Introduce tus credenciales</span>
+                <button class="btn" onclick="window.location.href='/login'">
+                    <span>Login</span>
+                    <i class="fa-solid fa-rocket"></i>
+                </button>
+            </div>
+            <div class="footerDiv">
+                <span class="text">¿Aún no te has alistado?</span>
+                <button class="btn" onclick="window.location.href='/registro'">
+                    <span>Enroll the future</span>
+                    <i class="fa-solid fa-file-contract"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    
+</body>
+<!-- <footer>
+    <%- include('partials/navigation') %>
+</footer> -->
+</html>

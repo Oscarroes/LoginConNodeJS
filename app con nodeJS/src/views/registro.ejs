@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- el css y bootstrap lo incluimos desde la carpeta partials - head -->
+    <%- include('partials/head') %>
+    <title><%= title %></title>
+
+    <script src="/registro.js" defer></script>
+
+</head>
+<body>
+
+    <div class='registerPage flex'>
+    <div class="container flex">
+        <div class="formDiv flex">
+            <div class="headerDiv">
+                <img src="/coheteLogo.png" alt="logo">
+                <h3>Comienza el viaje de tu vida!</h3>
+            </div>
+
+            <form id="registerForm" class="form grid">
+
+
+                <div class="inputDiv">
+                    <label htmlFor="email">Email</label>
+                    <div class="input flex">
+                        <i class="fa-solid fa-at"></i>
+                        <input type="email" id="email" placeholder="Escribe tu email">
+                    </div>
+                </div>
+
+                <div class="inputDiv">
+                    <label htmlFor="username">Usuario</label>
+                    <div class="input flex">
+                        <i class="fa-solid fa-user-astronaut"></i>
+                        <input type="text" id="username" placeholder="Pasajero...">
+                    </div>
+                </div>
+
+                <div class="inputDiv">
+                    <label htmlFor="password">Contraseña</label>
+                    <div class="input flex">
+                        <i class="fa-solid fa-tachograph-digital"></i>
+                        <input type="password" id="password" placeholder="Clave espacial...">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn flex">
+                    <span>Alístate</span>
+                    <i class="fa-solid fa-rocket"></i>
+                </button>
+
+                <span class="forgotPassword">
+                    ¿Ya tienes tu clave espacial? <a onclick="window.location.href='/login'">Login</a>
+                </span>
+
+            </form>
+        </div>
+    
+    </div>
+    </div>
+</body>
+</html>
